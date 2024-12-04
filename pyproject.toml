@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphix-ai_cli"
+version = "0.0.3"
+authors = [
+  { name="Dev@Graphix", email="dev@graphix-ai.io" },
+]
+description = "A CLI tool for Graphix"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = [
+    "accelerate==1.1.1",
+    "click==8.1.7",
+    "colorama==0.4.6",
+    "datasets==3.1.0",
+    "evaluate==0.4.3",
+    "requests==2.31.0",
+    "psutil==5.9.8",
+    "python-socketio[client]==5.11.2",
+    "keyring==25.2.0",
+    "keyrings.alt==5.0.1",
+    "speedtest-cli==2.1.3",
+    "pandas==2.2.2",
+    "py3nvml==0.2.7",
+    "transformers==4.46.2",
+    "torch==2.5.1"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/GraphixAIErc/Graphix-AI-CLI"
+Issues = "https://github.com/GraphixAIErc/Graphix-AI-CLI/issues"
+
+[project.scripts]
+graphix = "graphix.cli:main"
